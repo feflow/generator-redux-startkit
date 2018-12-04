@@ -1,8 +1,9 @@
 
 [![](https://img.shields.io/travis/feflow/generator-redux-startkit.svg)](https://travis-ci.com/feflow/generator-redux-startkit)
-[![Codecov](https://img.shields.io/codecov/c/github/feflow/generator-redux-startkit/master.svg)](https://codecov.io/gh/feflow/generator-redux-startkit/branch/master)
+[![codecov](https://codecov.io/gh/feflow/generator-redux-startkit/branch/master/graph/badge.svg)](https://codecov.io/gh/feflow/generator-redux-startkit)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 # generator-redux-startkit
 A generator for multiple-page application with react and redux.
@@ -58,45 +59,12 @@ $ feflow dev
 
 ## 代码规范
 
-本项目采用`Eslint`+`Prettier`代码风格，对于代码格式检查比较严格，如果遇到不知道如何解决的Eslint报错，可以使用`eslint . --fix`进行代码格式化，如果使用vscode，`command + shift + P` 输入`Format Document`执行代码格式化。
+本项目采用`Eslint`+`Prettier`代码风格，对于代码格式检查比较严格，如果遇到不知道如何解决的Eslint报错，可以使用`eslint . --fix`进行代码格式化，如果使用vscode，`command + shift + P` 输入`Format Document`执行代码自动格式化。
 
-## 构建输出及域名相关
 
-假设你需要在`xx.qq.com`上部署一个项目为`xx.qq.com/module/business`，参考`feflow.json`配置如下：
+# 如何贡献
 
-```sh
-{
-    "builderType": "builder-webpack3",
-    "builderOptions": {
-        "product": "now",                                    // 产品，此处可以是 now 或者 shangfen
-        "domain": "now.qq.com",                              // 域名，离线包的域名需要使用
-        "cdn": "11.url.cn",                                  // 资源发布到的cdn名称
-        "moduleName": "module",                              // 部署的模块
-        "bizName": "business",                               // 业务名称
-        "minifyHTML": true,                                  // 是否压缩 html
-        "minifyCSS": true,                                   // 是否压缩 js
-        "minifyJS": true,                                    // 是否压缩 css
-        "inlineCSS": true,                                   // 生成的 css 是否内联到首屏
-        "usePx2rem": true,                                   // 是否使用 Rem
-        "useReact": true,                                    // 是否是 React，如果为false，则不会在 html 中引用 React 框架 
-        "remUnit": 37.5,                                     // Rem 单位，对于 375 视觉稿，此处填写 37.5，750视觉稿需要改成 75 
-        "remPrecision": 8,                                   // Rem 的精度，即 px 转换成了 rem 后的小数点后位数
-        "inject": true,                                      // 打包生成的 js 文件是否自动注入到 html 文件 body 之后
-        "port": 8001,                                        // 本地开发的 webpack 构建服务进程端口号
-        "externals": [                                       // 基础框架不打入到 bundle 里面
-            {
-                "module": "react",
-                "entry": "//11.url.cn/now/lib/16.2.0/react.min.js?_bid=3123",
-                "global": "React"
-            },
-            {
-                "module": "react-dom",
-                "entry": "//11.url.cn/now/lib/16.2.0/react-dom.min.js?_bid=3123",
-                "global": "ReactDOM"
-            }
-        ]
-    }
-}
-```
-
-构建后，以`index.html`为例，最终输出的url为`xx.qq.com/module/business/index.html`，其中引入的cdn资源url为``
+1. 从目前已经存在的issue或者提出一个新的issue去讨论新的特性或者存在的bug.
+2. 在Github上Fork [仓库](https://github.com/feflow/generator-redux-startkit)，然后在master或者其它分支上开始进行您的修改.
+3. 编写测试用例表明某个bug被修复掉了或者新的特性可以正常工作.
+4. 提交PR直到它被merge或者发布出去了. :) .
