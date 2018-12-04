@@ -1,12 +1,11 @@
 language: node_js
 
 node_js:
-  - LTS
+  - stable
   - v11
   - v10
   - v8
   - v6
-  - v4
 
 cache:
   apt: true
