@@ -44,7 +44,8 @@
         "yosay": "^2.0.1"
     },
     "jest": {
-        "testEnvironment": "node"
+        "testEnvironment": "node",
+        "coverageDirectory": "coverage"
     },
     "lint-staged": {
         "*.js": [
@@ -74,7 +75,7 @@
     },
     "scripts": {
         "pretest": "eslint . --fix",
-        "test": "jest",
+        "test": "jest --coverage",
         "commit": "git-cz"
     },
     "config": {

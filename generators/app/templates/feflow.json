@@ -1,5 +1,5 @@
 {
-    "builderType": "builder-webpack3",
+    "builderType": "builder-webpack4",
     "builderOptions": {
         "moduleName": "<%= moduleName %>",
         "bizName": "<%= bizName %>",
