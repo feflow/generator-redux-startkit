@@ -10,12 +10,6 @@ module.exports = class extends Generator {
 
         const prompts = [
             {
-                type: "confirm",
-                name: "someAnswer",
-                message: "Would you like to enable this option?",
-                default: true
-            },
-            {
                 type: "input",
                 name: "name",
                 message: "请输入项目名称：",
@@ -29,16 +23,23 @@ module.exports = class extends Generator {
             },
             {
                 type: "input",
-                name: "moduleName",
-                message: "请输入项目一级目录名（可后续在feflow.json中改动）：",
+                name: "domain",
+                message: "请输入项目域名（如qq.com）：",
+                default: "qq.com"
+            },
+            {
+                type: "input",
+                name: "cdn",
+                message:
+                    "请输入项目使用的cdn域名（可省略，默认和网站域名相同）：",
                 default: "module"
             },
             {
                 type: "input",
-                name: "bizName",
+                name: "dir",
                 message:
-                    "请输入项目的二级目录名（可后续在feflow.json中改动）：",
-                default: "biz"
+                    "请输入项目子目录名（如mobile/activity，可后续在feflow.json中改动）：",
+                default: "module/biz"
             }
         ];
 
@@ -49,7 +50,8 @@ module.exports = class extends Generator {
     }
 
     writing() {
-        const { name, description, moduleName, bizName } = this.answers;
+        const { name, description, domain, cdn, dir } = this.answers;
+        const [moduleName, bizName] = dir.split("/");
         this.fs.copyTpl(
             this.templatePath("package.json"),
             this.destinationPath("package.json"),
@@ -62,6 +64,8 @@ module.exports = class extends Generator {
             this.templatePath("feflow.json"),
             this.destinationPath("feflow.json"),
             {
+                domain: domain,
+                cdn: cdn || domain,
                 moduleName: moduleName,
                 bizName: bizName
             }

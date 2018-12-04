@@ -10,8 +10,9 @@ describe("generator-redux-startkit:app", () => {
             .withPrompts({
                 name: "demo project",
                 description: "demo project description",
-                moduleName: "module",
-                bizName: "biz"
+                domain: "now.qq.com",
+                cdn: "11.url.cn",
+                dir: "module/biz"
             });
     });
 
