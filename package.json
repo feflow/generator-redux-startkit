@@ -1,6 +1,6 @@
 {
     "name": "generator-redux-startkit",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A generator for multiple-page application with react and redux.",
     "homepage": "https://github.com/feflow/generator-redux-startkit",
     "author": {
