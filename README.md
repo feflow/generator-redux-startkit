@@ -8,29 +8,20 @@
 # generator-redux-startkit
 A generator for multiple-page application with react and redux.
 
-基于react和redux的多页面项目模板。用于[feflow](http://www.feflowjs.org/zh-cn/docs/)
+基于react和redux的多页面项目模板。用于[feflow]。(http://www.feflowjs.org/zh-cn/docs/)
 
 # 快速开始
 
+``` bash
 ## 安装feflow
-``` bash
 $ npm install feflow-cli -g
-```
-
 ## 安装脚手架
-``` bash
 $ feflow install generator-redux-startkit
-```
-
 ## 初始化项目
-``` bash
 $ feflow init
 # 输入相关参数
 $ cd <folder>
-```
-
 ## 本地开发
-``` bash
 $ feflow dev
 # 访问默认端口http://127.0.0.1:8001
 ```
@@ -64,7 +55,7 @@ $ feflow dev
 
 # 如何贡献
 
-1. 从目前已经存在的issue或者提出一个新的issue去讨论新的特性或者存在的bug.
-2. 在Github上Fork [仓库](https://github.com/feflow/generator-redux-startkit)，然后在master或者其它分支上开始进行您的修改.
-3. 编写测试用例表明某个bug被修复掉了或者新的特性可以正常工作.
-4. 提交PR直到它被merge或者发布出去了. :) .
+1. 从目前已经存在的issue或者提出一个新的issue去讨论新的特性或者存在的bug。
+2. 在Github上Fork [仓库](https://github.com/feflow/generator-redux-startkit)，然后在master或者其它分支上开始进行您的修改。
+3. 编写测试用例表明某个bug被修复掉了或者新的特性可以正常工作。
+4. 提交PR，如果通过了测试并且覆盖率没问题，会进行Code Review并合并。
