@@ -1,4 +1,5 @@
 
+[![npm version](https://badge.fury.io/js/generator-redux-startkit.svg)](https://badge.fury.io/js/generator-redux-startkit)
 [![](https://img.shields.io/travis/feflow/generator-redux-startkit.svg)](https://travis-ci.com/feflow/generator-redux-startkit)
 [![codecov](https://codecov.io/gh/feflow/generator-redux-startkit/branch/master/graph/badge.svg)](https://codecov.io/gh/feflow/generator-redux-startkit)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
