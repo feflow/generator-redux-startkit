@@ -9,7 +9,7 @@
 # generator-redux-startkit
 A generator for multiple-page application with react and redux.
 
-基于react和redux的多页面项目模板。用于[feflow]。(http://www.feflowjs.org/zh-cn/docs/)
+基于react和redux的多页面项目模板。用于[feflow](http://www.feflowjs.org/zh-cn/docs/)，依赖构建器[builder-webpack4](https://github.com/feflow/builder-webpack4)。
 
 # 快速开始
 
@@ -25,6 +25,27 @@ $ cd <folder>
 ## 本地开发
 $ feflow dev
 # 访问默认端口http://127.0.0.1:8001
+```
+
+# feflow依赖
+
+本项目依赖`feflow@0.15.0`或以上版本，如果你之前已安装过旧版feflow，在`feflow dev`时可能会出现以下错误：
+
+```
+Cannot destructure property 'createHash' of 'undefined' or 'null'.
+```
+
+如果出现这种情况，可以采用如下操作进行修复：
+
+```bash
+## 进入.feflow目录
+cd ~/.feflow
+## 清空node_modules并重新安装构建器
+rm -rf node_modules
+npm install builder-webpack4 --global-style
+## 在项目中重新运行feflow
+cd your_project
+feflow dev
 ```
 
 # 项目规范
