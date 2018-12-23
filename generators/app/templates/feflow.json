@@ -15,12 +15,12 @@
         "externals": [
             {
                 "module": "react",
-                "entry": "https://11.url.cn/now/lib/16.2.0/react.min.js?_bid=3123",
+                "entry": "https://unpkg.com/react@16/umd/react.development.js",
                 "global": "React"
             },
             {
                 "module": "react-dom",
-                "entry": "https://11.url.cn/now/lib/16.2.0/react-dom.min.js?_bid=3123",
+                "entry": "https://unpkg.com/react-dom@16/umd/react-dom.development.js",
                 "global": "ReactDOM"
             }
         ]

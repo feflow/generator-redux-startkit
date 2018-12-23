@@ -74,6 +74,24 @@ feflow dev
 
 本项目采用`Eslint`+`Prettier`代码风格，对于代码格式检查比较严格，如果遇到不知道如何解决的Eslint报错，可以使用`eslint . --fix`进行代码格式化，如果使用vscode，`command + shift + P` 输入`Format Document`执行代码自动格式化。
 
+## CDN配置
+
+项目默认配置了`react`和`react-dom`的cdn，在`feflow.json`中可以对`external`进行修改。
+
+```
+"externals": [
+    {
+        "module": "react",
+        "entry": "https://unpkg.com/react@16/umd/react.development.js",
+        "global": "React"
+    },
+    {
+        "module": "react-dom",
+        "entry": "https://unpkg.com/react-dom@16/umd/react-dom.development.js",
+        "global": "ReactDOM"
+    }
+]
+```
 
 # 如何贡献
 

@@ -14,10 +14,8 @@ export default function configureStore(initialState) {
             window.__REDUX_DEVTOOLS_EXTENSION__()
     );
     if (module.hot) {
-        console.log('module.hot', module.hot)
         // Enable Webpack hot module replacement for reducers
         module.hot.accept('../reducers/reducers', () => {
-            console.log('what happend')
             const nextRootReducer = require('../reducers/reducers');
             store.replaceReducer(nextRootReducer);
         });
